@@ -1099,3 +1099,81 @@ tr:hover td {
   font-weight: 500;
   margin-bottom: 4px;
 }
+
+.time-slot-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+@media (max-width: 768px) {
+  .time-slot-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.time-slot {
+  padding: 10px 8px;
+  border: 2px solid var(--border);
+  border-radius: 8px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: #fff;
+}
+
+.time-slot:hover:not(.disabled) {
+  border-color: var(--primary-light);
+  background: #f0f9ff;
+}
+
+.time-slot.selected {
+  border-color: var(--primary);
+  background: #eff6ff;
+}
+
+.time-slot.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  background: #f1f5f9;
+}
+
+.time-slot .slot-time {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 2px;
+}
+
+.time-slot .slot-status {
+  font-size: 10px;
+  color: var(--text-secondary);
+}
+
+.time-slot:not(.disabled) .slot-status {
+  color: var(--success);
+  font-weight: 500;
+}
+
+.time-slot.disabled .slot-status {
+  color: #94a3b8;
+}
+
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.sidebar-nav {
+  max-height: calc(100vh - 280px);
+  overflow-y: auto;
+}
+
+.sidebar-nav::-webkit-scrollbar {
+  width: 4px;
+}
+
+.sidebar-nav::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.2);
+  border-radius: 2px;
+}
