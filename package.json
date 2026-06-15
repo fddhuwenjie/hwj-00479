@@ -1,0 +1,14 @@
+{
+  "name": "clinic-appointment",
+  "version": "1.0.0",
+  "description": "社区诊所在线预约挂号系统",
+  "scripts": {
+    "start": "node backend/server.js",
+    "dev": "node backend/server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "sql.js": "^1.10.3",
+    "cors": "^2.8.5"
+  }
+}
